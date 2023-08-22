@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserMessagesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [UserMessagesController::class, 'index'])->name('UserMessagesController.index');
+
+Route::post('/createUserMessage', [UserMessagesController::class, 'store'])->name('UserMessagesController.store');
+
+
