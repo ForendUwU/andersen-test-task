@@ -58,7 +58,7 @@
         <div class="flex justify-center items-center" style="flex-direction: column">
             @foreach($usersMessagesArr as $userMessage)
             <br>
-            <h1>{{ $userMessage -> name }}, {{ $userMessage -> email }}, {{ $userMessage -> message }} , {{ $userMessage -> created_at }}</h1>
+            <h1>{{ $userMessage->name }}, {{ $userMessage->email }}, {{ $userMessage->message }} , {{ $userMessage->created_at }}</h1>
             @endforeach
         </div>
     </body>

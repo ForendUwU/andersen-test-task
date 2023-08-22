@@ -22,9 +22,9 @@ class UserMessagesController extends Controller
         ]);
 
         $userMessage = new UsersMessages();
-        $userMessage->name = request('name');
-        $userMessage->email = request('email');
-        $userMessage->message = request('message');
+        $userMessage->name = $request->name;
+        $userMessage->email = $request->email;
+        $userMessage->message = $request->message;
 
         $userMessage->save();
         return redirect('/');
